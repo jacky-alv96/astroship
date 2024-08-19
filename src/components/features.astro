@@ -5,43 +5,40 @@ import { Icon } from "astro-icon/components";
 const features = [
   {
     description: 
-    "We offer all private suites",
-    icon: "bx:bxs-briefcase",
+    "All Private Suite Options",
+    icon: "bx:bxs-building-house",
   },
   {
-    title: "100% Static HTML, No JS",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      "24/7 Care Services",
+    icon: "bx:bxs-first-aid",
   },
   {
-    title: "On-Demand Components",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      "Meals Provided",
+    icon: "bx:bxs-bowl-hot",
   },
   {
-    title: "Broad Integration",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
+      "Medicine Reminders",
+    icon: "bx:bxs-timer",
   },
   {
-    title: "SEO Enabled",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
+      "In-Home Cleaning and Maintenance",
+    icon: "bx:bxs-spray-can",
   },
   {
-    title: "Community",
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      "Laundry Services",
+    icon: "bx:bxs-washer",
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
+  <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <import 'boxicons/css/boxicons.min.css';></import>
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
     What Makes Serenity Homes the Right Choice for You?
 </div>
@@ -52,12 +49,14 @@ const features = [
       <div class="flex flex-col items-center gap-4">
         <div class="mt-4 bg-black rounded-full p-4 w-16 h-16 flex items-center justify-center shrink-0">
           <Icon class="text-white w-8 h-8" name={item.icon} />
+          <i class={`bx ${item.icon} text-white w-1 h-1`}></i>
         </div>
         <div class="text-center">
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <h3 class="font-bold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed text-xl">{item.description}</p>
         </div>
       </div>
     ))
   }
 </div>
+
